@@ -2,3 +2,6 @@
 
 def test_simple_thing():
     assert 1+1 == 2
+
+def test_simple_thins2():
+    assert 2+2 == 4
