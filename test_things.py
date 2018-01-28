@@ -5,3 +5,6 @@ def test_simple_thing():
 
 def test_simple_thins2():
     assert 2+2 == 4
+
+def test_simple_thins3():
+    assert 3+3 == 6
