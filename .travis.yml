@@ -7,11 +7,11 @@ install:
 script:
   - pytest
 before_deploy:
-  - tar cvzf package_$TRAVIS_BUILD_NUMBER ./test_things.py
+  - tar cvzf package_$TRAVIS_BUILD_NUMBER.tar.gz ./test_things.py
 deploy:
   providers: releases
   api_key: $API_KEY
-  file: package_$TRAVIS_BUILD_NUMBER
+  file: package_$TRAVIS_BUILD_NUMBER.tar.gz
   skip_cleanup: true
   on:
     tags: true
