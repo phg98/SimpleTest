@@ -1,2 +1,2 @@
-# SimpleFlask
-SimpleFlask
+# SimpleTest
+SimpleTest
