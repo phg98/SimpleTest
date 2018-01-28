@@ -11,7 +11,7 @@ before_deploy:
 deploy:
   providers: releases
   api_key: $API_KEY
-  file: simple
+  file: package_$TRAVIS_BUILD_NUMBER
   skip_cleanup: true
   on:
     tags: true
