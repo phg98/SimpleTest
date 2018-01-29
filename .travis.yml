@@ -1,8 +1,17 @@
 language: python
 python:
-  - "2.7"
-  - "3.6"
+  - '2.7'
+  - '3.6'
 install:
-  - pip install pytest # or pip install -r requirements.txt
+  - pip install pytest
 script:
   - pytest
+before_deploy:
+  - tar cvzf package_$TRAVIS_BUILD_NUMBER.tar.gz ./test_things.py
+deploy:
+  provider: releases
+  api_key: $API_KEY
+  file: package_$TRAVIS_BUILD_NUMBER.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
